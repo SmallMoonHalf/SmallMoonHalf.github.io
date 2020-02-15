@@ -175,26 +175,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h3><blockquote>
-<figure class="highlight plain"><figcaption><span>['1', '7', '11'].map(parseInt) 返回 [1, NaN, 3]```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">答案解析：</span><br><span class="line">##### 要点: 函数参数</span><br><span class="line">- ###### map()函数</span><br><span class="line"> map是Array原型中的一个方法，它返回一个新的数组，其结果是将原始数组的每个元素传递给一个函数。</span><br><span class="line"> 当一个函数传递到map()，对于每次迭代，都有三个参数传递到函数：&#96;&#96;&#96;currentValue(元素值)，currentIndex(元素下标)，array(原数组)&#96;&#96;&#96;。</span><br><span class="line"> 即当[&#39;1&#39;, &#39;7&#39;, &#39;11&#39;]数组中的第一个元素’1‘到map执行parseInt时，parseInt接收的参数为&#96;&#96;&#96;(&#39;1&#39;, 0, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;]) </span><br></pre></td></tr></table></figure>
-<p>  所以可知，<br>  parseInt依次接收参数为：</p>
+<p>为什么 [‘1’, ‘7’, ‘11’].map(parseInt) 返回 [1, NaN, 3]</p>
 </blockquote>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parseInt(&#39;1&#39;, 0, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;])</span><br><span class="line">parseInt(&#39;7&#39;, 1, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;])</span><br><span class="line">parseInt(&#39;11&#39;, 2, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;])</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h6 id="parseInt-函数"><a href="#parseInt-函数" class="headerlink" title="parseInt()函数"></a>parseInt()函数</h6><p>parseInt函数有两个参数：string和radix（进制）。如果提供的radix为空或者为假值，进制（基数）默认为10。<br>所以</p>
-<blockquote>
-</blockquote>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">parseInt(&#39;1&#39;, 0, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;])</span><br><span class="line">parseInt(&#39;7&#39;, 1, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;])</span><br><span class="line">parseInt(&#39;11&#39;, 2, [&#39;1&#39;, &#39;7&#39;, &#39;11&#39;])</span><br></pre></td></tr></table></figure>
-<p>parseInt只接受前两个参数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">parseInt(&#39;1&#39;, 0)</span><br><span class="line">&#x2F;&#x2F; 0表示假，所以进制默认为10，以十进制转换，结果为 1</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">parseInt(&#39;7&#39;, 1)</span><br><span class="line">&#x2F;&#x2F; 在以1为进制数的系统中，7不存在，所以结果返回为 NaN</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">parseInt(&#39;11&#39;, 2)</span><br><span class="line">&#x2F;&#x2F; 在以2为进制数的系统中，11表示为十进制为3，所以结果为 3</span><br></pre></td></tr></table></figure>
-<p>所以最后返回为[1,NaN,3]</p>
-</li>
-</ul>
-
+<p>答案解析：</p>
+<h5 id="要点-函数参数"><a href="#要点-函数参数" class="headerlink" title="要点: 函数参数"></a>要点: 函数参数</h5>
+        
       
 
       
@@ -202,6 +187,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">练习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -265,6 +265,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">test</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">testhhh</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -321,18 +336,7 @@
       
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        
       
 
       
@@ -465,6 +469,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Javascript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">练习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">testhhh</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
